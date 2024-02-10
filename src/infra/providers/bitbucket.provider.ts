@@ -35,6 +35,6 @@ export class BitbucketProvider {
     const url =
       this.url +
       `/repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/merge`;
-    return await this.request.post(url, data);
+    return await this.request.post(url, { ...data, close_source_branch: true });
   }
 }
