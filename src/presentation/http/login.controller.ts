@@ -1,6 +1,6 @@
 import { Body, Controller, Post, UnauthorizedException } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
-import { LoginAuthDto } from 'src/shared/dtos/LoginAuth.dto';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { LoginAuthDto } from 'src/shared/dtos/loginAuth.dto';
 const jwt = require('jsonwebtoken');
 
 @Controller('auth')
@@ -9,6 +9,7 @@ export class LoginController {
   constructor() {}
 
   @Post()
+  @ApiOperation({ summary: 'Auth' })
   auth(@Body() body: LoginAuthDto): string {
     console.log(body);
     console.log(process.env.JWT_AUTH_KEY);
