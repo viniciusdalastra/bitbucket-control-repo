@@ -1,8 +1,17 @@
-import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  Post,
+  Query,
+  UseGuards,
+} from '@nestjs/common';
 import {
   ApiBearerAuth,
   ApiOperation,
   ApiParam,
+  ApiQuery,
   ApiTags,
 } from '@nestjs/swagger';
 import { LocalAuthGuard } from 'src/infra/auth/auth.guard';
@@ -19,8 +28,17 @@ export class RepositorieController {
   @Get()
   @UseGuards(LocalAuthGuard)
   @ApiOperation({ summary: 'Get Repositories' })
-  async getRepositories() {
-    return await this.provider.getRepositories();
+  async getRepositories(@Query() query) {
+    const { page, pagelen } = query;
+    return await this.provider.getRepositories(page, pagelen);
+  }
+
+  @Get('workspaces')
+  @UseGuards(LocalAuthGuard)
+  @ApiOperation({ summary: 'Get Workspaces' })
+  async getWorkspaces(@Query() query) {
+    const { page, pagelen } = query;
+    return await this.provider.getWorkspaces(page, pagelen);
   }
 
   @Post('pull-request')
