@@ -1,4 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
+import { CreateBranchDto } from 'src/shared/dtos/createBranch.dto';
 import { MergeDto } from 'src/shared/dtos/merge.dto';
 import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 
@@ -37,6 +38,29 @@ export class BitbucketProvider {
     const url =
       this.url + '/repositories/my-workspace/my-repository/pullrequests';
     const response = await this.request.post(url, data);
+    return response.data;
+  }
+
+  public async getBranchsFromPullRequest(
+    workspace: string,
+    repositorie: string,
+  ) {
+    const url =
+      this.url + `/repositories/${workspace}/${repositorie}/refs/branches`;
+
+    const response = await this.request.get(url);
+    return response.data;
+  }
+
+  public async createBranchsFromPullRequest(
+    workspace: string,
+    repositorie: string,
+    body: CreateBranchDto,
+  ) {
+    const url =
+      this.url + `/repositories/${workspace}/${repositorie}/refs/branches`;
+
+    const response = await this.request.post(url, body);
     return response.data;
   }
 

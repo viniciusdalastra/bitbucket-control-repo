@@ -16,6 +16,7 @@ import {
 } from '@nestjs/swagger';
 import { LocalAuthGuard } from 'src/infra/auth/auth.guard';
 import { BitbucketProvider } from 'src/infra/providers/bitbucket.provider';
+import { CreateBranchDto } from 'src/shared/dtos/createBranch.dto';
 import { MergeDto } from 'src/shared/dtos/merge.dto';
 import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 
@@ -39,6 +40,34 @@ export class RepositorieController {
   async getWorkspaces(@Query() query) {
     const { page, pagelen } = query;
     return await this.provider.getWorkspaces(page, pagelen);
+  }
+
+  @Get('branch/:workspace/:repositorie')
+  @UseGuards(LocalAuthGuard)
+  @ApiOperation({ summary: 'Get Branchs' })
+  async getBranchs(
+    @Param('workspace') workspace: string,
+    @Param('repositorie') repositorie: string,
+  ) {
+    return await this.provider.getBranchsFromPullRequest(
+      workspace,
+      repositorie,
+    );
+  }
+
+  @Post('branch/:workspace/:repositorie')
+  @UseGuards(LocalAuthGuard)
+  @ApiOperation({ summary: 'Create Branchs' })
+  async createBranchs(
+    @Param('workspace') workspace: string,
+    @Param('repositorie') repositorie: string,
+    @Body() body: CreateBranchDto,
+  ) {
+    return await this.provider.createBranchsFromPullRequest(
+      workspace,
+      repositorie,
+      body,
+    );
   }
 
   @Post('pull-request')
