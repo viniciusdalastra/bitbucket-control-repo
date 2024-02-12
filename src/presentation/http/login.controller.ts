@@ -11,8 +11,6 @@ export class LoginController {
   @Post()
   @ApiOperation({ summary: 'Auth' })
   auth(@Body() body: LoginAuthDto): string {
-    console.log(body);
-    console.log(process.env.JWT_AUTH_KEY);
     if (
       body.login === process.env.LOGIN &&
       body.password === process.env.PASSWORD
