@@ -19,7 +19,9 @@ export class CreatePullRequestByDefaultJson {
         repositorie.uuid,
         `sync-${body.from}-${body.to}`,
       );
-      if (!branchExists) {
+      if (branchExists) {
+        await this.createPullRequest(repositorie, branchExists, body.to);
+      } else {
         const branchFrom = await this.provider.getBranchRepositorieFromName(
           repositorie.workspace,
           repositorie.uuid,
@@ -36,15 +38,7 @@ export class CreatePullRequestByDefaultJson {
             repositorie.uuid,
             newBranch,
           );
-        console.log(
-          `the branch from the sync as created: sync-${body.from}-${body.to}`,
-        );
         await this.createPullRequest(repositorie, newBranchCreated, body.to);
-      } else {
-        console.log(
-          `the branch from the sync only exists: sync-${body.from}-${body.to}`,
-        );
-        await this.createPullRequest(repositorie, branchExists, body.to);
       }
     }
 

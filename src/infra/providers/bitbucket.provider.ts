@@ -22,18 +22,28 @@ export class BitbucketProvider {
   }
 
   public async getWorkspaces(page = 1, pagelen = 100) {
-    const url = this.url + `workspaces?page=${page}&pagelen=${pagelen}`;
+    try {
+      const url = this.url + `workspaces?page=${page}&pagelen=${pagelen}`;
 
-    const response = await this.request.get(url);
-    return response.data;
+      const response = await this.request.get(url);
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
   }
 
   public async getRepositories(page = 1, pagelen = 100) {
-    const url =
-      this.url +
-      `user/permissions/repositories?page=${page}&pagelen=${pagelen}`;
-    const response = await this.request.get(url);
-    return response.data;
+    try {
+      const url =
+        this.url +
+        `user/permissions/repositories?page=${page}&pagelen=${pagelen}`;
+      const response = await this.request.get(url);
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
   }
 
   public async createPullRequest(
@@ -47,12 +57,8 @@ export class BitbucketProvider {
       const response = await this.request.post(url, data);
       return response.data;
     } catch (error) {
-      if (
-        error?.response?.data?.error?.message ===
-        'There are no changes to be pulled'
-      ) {
-        return false;
-      }
+      console.log(error?.response?.data);
+      return error?.response?.data;
     }
   }
 
@@ -60,11 +66,16 @@ export class BitbucketProvider {
     workspace: string,
     repositorie: string,
   ) {
-    const url =
-      this.url + `/repositories/${workspace}/${repositorie}/refs/branches`;
+    try {
+      const url =
+        this.url + `/repositories/${workspace}/${repositorie}/refs/branches`;
 
-    const response = await this.request.get(url);
-    return response.data;
+      const response = await this.request.get(url);
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
   }
 
   public async getBranchRepositorieFromName(
@@ -106,11 +117,16 @@ export class BitbucketProvider {
     repositorie: string,
     body: CreateBranchDto,
   ) {
-    const url =
-      this.url + `/repositories/${workspace}/${repositorie}/refs/branches`;
+    try {
+      const url =
+        this.url + `/repositories/${workspace}/${repositorie}/refs/branches`;
 
-    const response = await this.request.post(url, body);
-    return response.data;
+      const response = await this.request.post(url, body);
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
   }
 
   public async mergePullRequest(
@@ -119,13 +135,18 @@ export class BitbucketProvider {
     pullRequest: string,
     data: MergeDto,
   ) {
-    const url =
-      this.url +
-      `/repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/merge`;
-    const response = await this.request.post(url, {
-      ...data,
-      close_source_branch: true,
-    });
-    return response.data;
+    try {
+      const url =
+        this.url +
+        `/repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/merge`;
+      const response = await this.request.post(url, {
+        ...data,
+        close_source_branch: true,
+      });
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
   }
 }
