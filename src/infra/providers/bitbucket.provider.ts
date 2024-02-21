@@ -84,6 +84,23 @@ export class BitbucketProvider {
     }
   }
 
+  public async deleteBranchRepositorieFromName(
+    workspace: string,
+    repositorie: string,
+    name: string,
+  ) {
+    try {
+      const url =
+        this.url +
+        `/repositories/${workspace}/${repositorie}/refs/branches/${name}`;
+
+      const response = await this.request.delete(url);
+      return response.data;
+    } catch (error) {
+      return false;
+    }
+  }
+
   public async createBranchsFromRepositorie(
     workspace: string,
     repositorie: string,

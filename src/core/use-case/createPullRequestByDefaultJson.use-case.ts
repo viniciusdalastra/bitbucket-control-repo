@@ -78,6 +78,12 @@ export class CreatePullRequestByDefaultJson {
         branch: branch.name,
         links: pullRequestCreated.links,
       });
+    } else {
+      this.provider.deleteBranchRepositorieFromName(
+        repositorie.workspace,
+        repositorie.uuid,
+        branch.name,
+      );
     }
   }
 
