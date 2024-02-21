@@ -1,8 +1,10 @@
+import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 import { CreateBranchDto } from 'src/shared/dtos/createBranch.dto';
 import { MergeDto } from 'src/shared/dtos/merge.dto';
 import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 
+@Injectable()
 export class BitbucketProvider {
   private url = 'https://api.bitbucket.org/2.0/';
   private request: AxiosInstance;
@@ -34,14 +36,27 @@ export class BitbucketProvider {
     return response.data;
   }
 
-  public async createPullRequest(data: PullRequestDto) {
-    const url =
-      this.url + '/repositories/my-workspace/my-repository/pullrequests';
-    const response = await this.request.post(url, data);
-    return response.data;
+  public async createPullRequest(
+    workspace: string,
+    repositorie: string,
+    data: PullRequestDto,
+  ) {
+    try {
+      const url =
+        this.url + `/repositories/${workspace}/${repositorie}/pullrequests`;
+      const response = await this.request.post(url, data);
+      return response.data;
+    } catch (error) {
+      if (
+        error?.response?.data?.error?.message ===
+        'There are no changes to be pulled'
+      ) {
+        return false;
+      }
+    }
   }
 
-  public async getBranchsFromPullRequest(
+  public async getBranchsFromRepositorie(
     workspace: string,
     repositorie: string,
   ) {
@@ -52,7 +67,24 @@ export class BitbucketProvider {
     return response.data;
   }
 
-  public async createBranchsFromPullRequest(
+  public async getBranchRepositorieFromName(
+    workspace: string,
+    repositorie: string,
+    name: string,
+  ) {
+    try {
+      const url =
+        this.url +
+        `/repositories/${workspace}/${repositorie}/refs/branches/${name}`;
+
+      const response = await this.request.get(url);
+      return response.data;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  public async createBranchsFromRepositorie(
     workspace: string,
     repositorie: string,
     body: CreateBranchDto,

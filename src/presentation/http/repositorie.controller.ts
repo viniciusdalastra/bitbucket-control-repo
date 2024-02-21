@@ -14,9 +14,11 @@ import {
   ApiQuery,
   ApiTags,
 } from '@nestjs/swagger';
+import { CreatePullRequestByDefaultJson } from 'src/core/use-case/createPullRequestByDefaultJson.use-case';
 import { LocalAuthGuard } from 'src/infra/auth/auth.guard';
 import { BitbucketProvider } from 'src/infra/providers/bitbucket.provider';
 import { CreateBranchDto } from 'src/shared/dtos/createBranch.dto';
+import { DefaultPullRequestsDto } from 'src/shared/dtos/defaultPullRequestsDto.dto';
 import { MergeDto } from 'src/shared/dtos/merge.dto';
 import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 
@@ -24,7 +26,10 @@ import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 @ApiTags('Repositorie')
 @ApiBearerAuth()
 export class RepositorieController {
-  constructor(private readonly provider: BitbucketProvider) {}
+  constructor(
+    private readonly provider: BitbucketProvider,
+    private readonly createPullRequestByDefaultJson: CreatePullRequestByDefaultJson,
+  ) {}
 
   @Get()
   @UseGuards(LocalAuthGuard)
@@ -49,7 +54,7 @@ export class RepositorieController {
     @Param('workspace') workspace: string,
     @Param('repositorie') repositorie: string,
   ) {
-    return await this.provider.getBranchsFromPullRequest(
+    return await this.provider.getBranchsFromRepositorie(
       workspace,
       repositorie,
     );
@@ -63,18 +68,32 @@ export class RepositorieController {
     @Param('repositorie') repositorie: string,
     @Body() body: CreateBranchDto,
   ) {
-    return await this.provider.createBranchsFromPullRequest(
+    return await this.provider.createBranchsFromRepositorie(
       workspace,
       repositorie,
       body,
     );
   }
 
-  @Post('pull-request')
+  @Post('pull-request/:workspace/:repositorie')
+  @ApiParam({
+    name: 'repositorie',
+    description: 'repositorie id',
+    type: String,
+  })
+  @ApiParam({
+    name: 'pullRequest',
+    description: 'pull Request id',
+    type: String,
+  })
   @UseGuards(LocalAuthGuard)
   @ApiOperation({ summary: 'Create Pull Request' })
-  async createPullRequest(@Body() body: PullRequestDto) {
-    return await this.provider.createPullRequest(body);
+  async createPullRequest(
+    @Body() body: PullRequestDto,
+    @Param('workspace') workspace: string,
+    @Param('repositorie') repositorie: string,
+  ) {
+    return await this.provider.createPullRequest(workspace, repositorie, body);
   }
 
   @Post('merge/:workspace/:repositorie/:pullRequest')
@@ -103,5 +122,12 @@ export class RepositorieController {
       pullRequest,
       body,
     );
+  }
+
+  @Post('default-pull-request')
+  @UseGuards(LocalAuthGuard)
+  @ApiOperation({ summary: 'Create Default Pull Request' })
+  async makePullRequestDefault(@Body() body: DefaultPullRequestsDto) {
+    return await this.createPullRequestByDefaultJson.execute(body);
   }
 }
