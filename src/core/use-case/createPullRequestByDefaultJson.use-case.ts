@@ -14,35 +14,24 @@ export class CreatePullRequestByDefaultJson {
     const repositories = this.loadJson();
     for (const repositorie of repositories) {
       console.log(`process repositorie ${repositorie.name}`);
-      const branchExists = await this.provider.getBranchRepositorieFromName(
-        repositorie.workspace,
-        repositorie.uuid,
-        `sync-${body.from}-${body.to}`,
-      );
-      if (branchExists) {
-        await this.createPullRequest(repositorie, branchExists, body.to);
-      } else {
-        const branchFrom = await this.provider.getBranchRepositorieFromName(
-          repositorie.workspace,
-          repositorie.uuid,
-          body.from,
-        );
-        const newBranch = {
-          name: `sync-${body.from}-${body.to}`,
-          target: { hash: branchFrom.target.hash },
-        };
+      await this.removeOldestBranch(repositorie, body);
 
-        const newBranchCreated =
-          await this.provider.createBranchsFromRepositorie(
-            repositorie.workspace,
-            repositorie.uuid,
-            newBranch,
-          );
-        await this.createPullRequest(repositorie, newBranchCreated, body.to);
-      }
+      const newBranchCreated = await this.createNewBranch(repositorie, body);
+
+      await this.createPullRequest(repositorie, newBranchCreated, body.to);
     }
 
     return this.pullRequestCreated;
+  }
+
+  private async createNewBranch(repositorie, body) {
+    const newBranch = await this.getNewBranch(repositorie, body);
+
+    return await this.provider.createBranchsFromRepositorie(
+      repositorie.workspace,
+      repositorie.uuid,
+      newBranch,
+    );
   }
 
   private async createPullRequest(repositorie, branch, to) {
@@ -110,5 +99,32 @@ export class CreatePullRequestByDefaultJson {
     } catch (error) {
       throw new Error(`Error on load JSON: ${error.message}`);
     }
+  }
+
+  private async removeOldestBranch(repositorie, body) {
+    const branchExists = await this.provider.getBranchRepositorieFromName(
+      repositorie.workspace,
+      repositorie.uuid,
+      `sync-${body.from}-${body.to}`,
+    );
+    if (branchExists) {
+      await this.provider.deleteBranchRepositorieFromName(
+        repositorie.workspace,
+        repositorie.uuid,
+        branchExists.name,
+      );
+    }
+  }
+
+  private async getNewBranch(repositorie, body) {
+    const branchFrom = await this.provider.getBranchRepositorieFromName(
+      repositorie.workspace,
+      repositorie.uuid,
+      body.from,
+    );
+    return {
+      name: `sync-${body.from}-${body.to}`,
+      target: { hash: branchFrom.target.hash },
+    };
   }
 }
