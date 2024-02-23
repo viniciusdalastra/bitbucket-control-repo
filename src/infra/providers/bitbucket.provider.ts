@@ -138,11 +138,45 @@ export class BitbucketProvider {
     try {
       const url =
         this.url +
-        `/repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/merge`;
+        `repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/merge`;
       const response = await this.request.post(url, {
         ...data,
         close_source_branch: true,
       });
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
+  }
+  public async declinePullRequest(
+    workspace: string,
+    repositorie: string,
+    pullRequest: string,
+  ) {
+    try {
+      const url =
+        this.url +
+        `repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/decline`;
+      console.log(url);
+      const response = await this.request.post(url);
+      return response.data;
+    } catch (error) {
+      console.log(error?.response?.data);
+      return error?.response?.data;
+    }
+  }
+  public async checkDiffPullRequest(
+    workspace: string,
+    repositorie: string,
+    pullRequest: string,
+  ) {
+    try {
+      const url =
+        this.url +
+        `repositories/${workspace}/${repositorie}/pullrequests/${pullRequest}/diffstat`;
+      console.log(url);
+      const response = await this.request.get(url);
       return response.data;
     } catch (error) {
       console.log(error?.response?.data);

@@ -67,11 +67,30 @@ export class CreatePullRequestByDefaultJson {
     );
 
     if (pullRequestCreated) {
-      this.pullRequestCreated.push({
-        name: repositorie.name,
-        branch: branch.name,
-        links: pullRequestCreated.links,
-      });
+      const diffStatPr = await this.provider.checkDiffPullRequest(
+        repositorie.workspace,
+        repositorie.uuid,
+        pullRequestCreated.id,
+      );
+
+      if (diffStatPr.size > 0) {
+        this.pullRequestCreated.push({
+          name: repositorie.name,
+          branch: branch.name,
+          links: pullRequestCreated.links,
+        });
+      } else {
+        this.provider.declinePullRequest(
+          repositorie.workspace,
+          repositorie.uuid,
+          pullRequestCreated.id,
+        );
+        this.provider.deleteBranchRepositorieFromName(
+          repositorie.workspace,
+          repositorie.uuid,
+          branch.name,
+        );
+      }
     } else {
       this.provider.deleteBranchRepositorieFromName(
         repositorie.workspace,
