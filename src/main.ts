@@ -4,6 +4,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors({ allowedHeaders: '', origin: '*' });
 
   const config = new DocumentBuilder()
     .setTitle('Bitbucket Sync Service')
