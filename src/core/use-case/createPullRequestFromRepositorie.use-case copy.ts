@@ -2,24 +2,23 @@ import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
 import { BitbucketProvider } from 'src/infra/providers/bitbucket.provider';
 import { DefaultPullRequestsDto } from 'src/shared/dtos/defaultPullRequests.dto';
+import { RepositoriePullRequestsDto } from 'src/shared/dtos/repositoriePullRequestsDto.dto';
 
 @Injectable()
-export class CreatePullRequestByDefaultJsonUseCase {
+export class CreatePullRequestFromRepositorieUseCase {
   private pullRequestCreated = [];
   constructor(private provider: BitbucketProvider) {
     this.pullRequestCreated = [];
   }
 
-  async execute(body: DefaultPullRequestsDto) {
-    const repositories = this.loadJson();
-    for (const repositorie of repositories) {
-      console.log(`process repositorie ${repositorie.name}`);
-      await this.removeOldestBranch(repositorie, body);
+  async execute(body: RepositoriePullRequestsDto) {
+    const { repositorie } = body;
+    console.log(`process repositorie ${repositorie.name}`);
+    await this.removeOldestBranch(repositorie, body);
 
-      const newBranchCreated = await this.createNewBranch(repositorie, body);
+    const newBranchCreated = await this.createNewBranch(repositorie, body);
 
-      await this.createPullRequest(repositorie, newBranchCreated, body.to);
-    }
+    await this.createPullRequest(repositorie, newBranchCreated, body.to);
 
     return this.pullRequestCreated;
   }
