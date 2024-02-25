@@ -8,22 +8,15 @@ import {
   Query,
   UseGuards,
 } from '@nestjs/common';
-import {
-  ApiBearerAuth,
-  ApiOperation,
-  ApiParam,
-  ApiQuery,
-  ApiTags,
-} from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { CreatePullRequestByDefaultJsonUseCase } from 'src/core/use-case/createPullRequestByDefaultJson.use-case';
-import { CreatePullRequestFromRepositorieUseCase } from 'src/core/use-case/createPullRequestFromRepositorie.use-case copy';
+import { CreatePullRequestFromRepositorieUseCase } from 'src/core/use-case/createPullRequestFromRepositorie.use-case';
 import { GetDefaultRepositoriesUseCase } from 'src/core/use-case/getDefaultRepositories.use-case';
 import { LocalAuthGuard } from 'src/infra/auth/auth.guard';
 import { BitbucketProvider } from 'src/infra/providers/bitbucket.provider';
 import { CreateBranchDto } from 'src/shared/dtos/createBranch.dto';
 import { DefaultPullRequestsDto } from 'src/shared/dtos/defaultPullRequests.dto';
 import { DeleteBranchDto } from 'src/shared/dtos/deleteBranch.dto';
-import { MergeDto } from 'src/shared/dtos/merge.dto';
 import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 import { RepositoriePullRequestsDto } from 'src/shared/dtos/repositoriePullRequestsDto.dto';
 

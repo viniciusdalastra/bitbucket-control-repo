@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import axios, { AxiosInstance } from 'axios';
 import { CreateBranchDto } from 'src/shared/dtos/createBranch.dto';
-import { MergeDto } from 'src/shared/dtos/merge.dto';
 import { PullRequestDto } from 'src/shared/dtos/pullRequest.dto';
 
 @Injectable()

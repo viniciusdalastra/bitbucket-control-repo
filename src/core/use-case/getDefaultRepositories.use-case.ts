@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-import { DefaultPullRequestsDto } from 'src/shared/dtos/defaultPullRequests.dto';
 
 @Injectable()
 export class GetDefaultRepositoriesUseCase {

@@ -1,182 +1,650 @@
 [
   {
-    "name": "[omni-monorepo]~attendance-reports-service",
-    "uuid": "{d8b703a9-1ebe-4fb8-991f-3113c7a45300}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~channels-service",
-    "uuid": "{833d1069-edb8-4638-90f0-ea6d9a5e3b09}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~chat-persistence-service",
-    "uuid": "{de7a5267-e23d-4738-922a-e425d1cdc496}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~chat-service",
-    "uuid": "{81a4e2dd-ecc4-47ff-973d-1565676b72fe}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~contacts-service",
-    "uuid": "{b7f4b146-6392-4f6e-a152-025f8db1d445}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~customer-service-service",
-    "uuid": "{00f41f63-e858-4d96-a02b-0019bc39737f}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~flow-service",
-    "uuid": "{812188bb-92af-44f4-a637-f56d59630c9e}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~holidays-service",
-    "uuid": "{bf1493d4-054d-4fd9-9a41-62785096fdec}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~login-report-service",
-    "uuid": "{5b814c85-8786-4e09-9803-51e70025cabd}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~teams-service",
-    "uuid": "{c9bf29e4-23e1-46f6-b65a-08bc10bb7f42}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~uploader-service",
-    "uuid": "{65ae89d9-8c5a-4b72-adaa-012af43da41e}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~user-service",
-    "uuid": "{ceaafa04-fba9-4aa7-b5f8-c0b8c77c30e6}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~whatsapp-service",
-    "uuid": "{2cac7496-066d-4efd-a324-c88cb3b2bd50}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~shared-module",
-    "uuid": "{d91d3474-a1c4-4e91-b219-dd5bc294d0bc}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~report-pause-service",
-    "uuid": "{5a451c92-9231-41ba-a4fd-84bbd05376ac}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~facebook-messenger-service",
-    "uuid": "{7b4f1d42-e64f-42a8-b5c5-047424b39076}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~webhooks-service",
-    "uuid": "{d77e91b3-ea5c-464d-b25a-c1b6d361dc78}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~instagram-direct-service",
-    "uuid": "{8f0d4b14-da13-41da-bafe-babfdbc83d63}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~call-history-service",
-    "uuid": "{c718cc12-7be3-40a7-b4de-95f06f98dc9f}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~whatsapp-oficial",
-    "uuid": "{c61445bc-f29a-4b18-804b-0295e05e7c0e}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~timeline-service",
-    "uuid": "{5512cbbc-70f5-42a7-9636-3ad169821600}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~mail-service",
-    "uuid": "{f14778e8-0af1-4cd5-90da-6efd72b97883}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "omni-monorepo-protocol-service",
-    "uuid": "{cc98b7c8-32cd-4584-9764-4c68378495f2}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~flow-new-engine-service",
-    "uuid": "{dae5ba35-06f0-4790-99b5-9ba2396c8f78}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~tags-service",
-    "uuid": "{96883390-4821-4044-9d63-0217c905d15d}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "omni-monorepo-parameters-service",
-    "uuid": "{846ef514-0a2b-411c-a6da-cf2ed91234ff}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~marketing-campaign-service",
-    "uuid": "{173e9903-3839-44d7-b212-1fcd75e52840}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~task-scheduling-engine-service",
-    "uuid": "{1115c2ad-8bac-4b40-8c7d-afdf6b14c959}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~marketing-campaign-engine-service",
-    "uuid": "{06d54043-9802-4c0a-abfa-21e4d690d739}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "[omni-monorepo]~public-api-service",
-    "uuid": "{9958eab6-7a96-4932-91f3-9fa9e0c1c216}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "omni-monorepo-telegram-service",
-    "uuid": "{1691d970-e957-46ff-82e0-ad99aa2d87c3}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "omni-monorepo-whatsomni-service",
-    "uuid": "{35d7e248-e430-4f38-8928-a8d63f5c1774}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
-    "name": "omni-monorepo-marketplace-service",
-    "uuid": "{dfd16d97-92d1-4e6c-9140-27065c91743d}",
-    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
-  },
-  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omnismart-angular",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omnismart-angular"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omnismart-angular"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bc3797f42-68a9-4d45-a50c-7ed3cb66dde2%7D?ts=default"
+      }
+    },
     "name": "omnismart-angular",
     "uuid": "{c3797f42-68a9-4d45-a50c-7ed3cb66dde2}",
     "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
   },
   {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omnismart-react-widget",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omnismart-react-widget"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omnismart-react-widget"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B33ff69f0-903b-45fd-99cc-f2b8759901d5%7D?ts=js"
+      }
+    },
+    "name": "omnismart-react-widget",
+    "uuid": "{33ff69f0-903b-45fd-99cc-f2b8759901d5}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-attendance-reports-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-attendance-reports-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-attendance-reports-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bd8b703a9-1ebe-4fb8-991f-3113c7a45300%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~attendance-reports-service",
+    "uuid": "{d8b703a9-1ebe-4fb8-991f-3113c7a45300}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-channels-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-channels-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-channels-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B833d1069-edb8-4638-90f0-ea6d9a5e3b09%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~channels-service",
+    "uuid": "{833d1069-edb8-4638-90f0-ea6d9a5e3b09}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-chat-persistence-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-chat-persistence-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-chat-persistence-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bde7a5267-e23d-4738-922a-e425d1cdc496%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~chat-persistence-service",
+    "uuid": "{de7a5267-e23d-4738-922a-e425d1cdc496}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-chat-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-chat-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-chat-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B81a4e2dd-ecc4-47ff-973d-1565676b72fe%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~chat-service",
+    "uuid": "{81a4e2dd-ecc4-47ff-973d-1565676b72fe}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-contacts-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-contacts-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-contacts-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bb7f4b146-6392-4f6e-a152-025f8db1d445%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~contacts-service",
+    "uuid": "{b7f4b146-6392-4f6e-a152-025f8db1d445}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-customer-service-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-customer-service-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-customer-service-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B00f41f63-e858-4d96-a02b-0019bc39737f%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~customer-service-service",
+    "uuid": "{00f41f63-e858-4d96-a02b-0019bc39737f}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-flow-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-flow-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-flow-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B812188bb-92af-44f4-a637-f56d59630c9e%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~flow-service",
+    "uuid": "{812188bb-92af-44f4-a637-f56d59630c9e}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-holidays-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-holidays-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-holidays-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bbf1493d4-054d-4fd9-9a41-62785096fdec%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~holidays-service",
+    "uuid": "{bf1493d4-054d-4fd9-9a41-62785096fdec}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-login-report-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-login-report-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-login-report-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B5b814c85-8786-4e09-9803-51e70025cabd%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~login-report-service",
+    "uuid": "{5b814c85-8786-4e09-9803-51e70025cabd}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-teams-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-teams-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-teams-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bc9bf29e4-23e1-46f6-b65a-08bc10bb7f42%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~teams-service",
+    "uuid": "{c9bf29e4-23e1-46f6-b65a-08bc10bb7f42}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-uploader-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-uploader-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-uploader-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B65ae89d9-8c5a-4b72-adaa-012af43da41e%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~uploader-service",
+    "uuid": "{65ae89d9-8c5a-4b72-adaa-012af43da41e}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-user-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-user-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-user-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bceaafa04-fba9-4aa7-b5f8-c0b8c77c30e6%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~user-service",
+    "uuid": "{ceaafa04-fba9-4aa7-b5f8-c0b8c77c30e6}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-whatsapp-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-whatsapp-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-whatsapp-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B2cac7496-066d-4efd-a324-c88cb3b2bd50%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~whatsapp-service",
+    "uuid": "{2cac7496-066d-4efd-a324-c88cb3b2bd50}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-shared-module",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-shared-module"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-shared-module"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bd91d3474-a1c4-4e91-b219-dd5bc294d0bc%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~shared-module",
+    "uuid": "{d91d3474-a1c4-4e91-b219-dd5bc294d0bc}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-report-pause-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-report-pause-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-report-pause-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B5a451c92-9231-41ba-a4fd-84bbd05376ac%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~report-pause-service",
+    "uuid": "{5a451c92-9231-41ba-a4fd-84bbd05376ac}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-facebook-messenger-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-facebook-messenger-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-facebook-messenger-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B7b4f1d42-e64f-42a8-b5c5-047424b39076%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~facebook-messenger-service",
+    "uuid": "{7b4f1d42-e64f-42a8-b5c5-047424b39076}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-webhooks-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-webhooks-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-webhooks-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bd77e91b3-ea5c-464d-b25a-c1b6d361dc78%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~webhooks-service",
+    "uuid": "{d77e91b3-ea5c-464d-b25a-c1b6d361dc78}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-instagram-direct-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-instagram-direct-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-instagram-direct-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B8f0d4b14-da13-41da-bafe-babfdbc83d63%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~instagram-direct-service",
+    "uuid": "{8f0d4b14-da13-41da-bafe-babfdbc83d63}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-call-history-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-call-history-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-call-history-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bc718cc12-7be3-40a7-b4de-95f06f98dc9f%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~call-history-service",
+    "uuid": "{c718cc12-7be3-40a7-b4de-95f06f98dc9f}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-whatsapp-oficial",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-whatsapp-oficial"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-whatsapp-oficial"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bc61445bc-f29a-4b18-804b-0295e05e7c0e%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~whatsapp-oficial",
+    "uuid": "{c61445bc-f29a-4b18-804b-0295e05e7c0e}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-timeline-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-timeline-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-timeline-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B5512cbbc-70f5-42a7-9636-3ad169821600%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~timeline-service",
+    "uuid": "{5512cbbc-70f5-42a7-9636-3ad169821600}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-mail-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-mail-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-mail-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bf14778e8-0af1-4cd5-90da-6efd72b97883%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~mail-service",
+    "uuid": "{f14778e8-0af1-4cd5-90da-6efd72b97883}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-protocol-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-protocol-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-protocol-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bcc98b7c8-32cd-4584-9764-4c68378495f2%7D?ts=default"
+      }
+    },
+    "name": "omni-monorepo-protocol-service",
+    "uuid": "{cc98b7c8-32cd-4584-9764-4c68378495f2}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-flow-new-engine-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-flow-new-engine-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-flow-new-engine-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bdae5ba35-06f0-4790-99b5-9ba2396c8f78%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~flow-new-engine-service",
+    "uuid": "{dae5ba35-06f0-4790-99b5-9ba2396c8f78}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-tags-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-tags-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-tags-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B96883390-4821-4044-9d63-0217c905d15d%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~tags-service",
+    "uuid": "{96883390-4821-4044-9d63-0217c905d15d}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-parameters-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-parameters-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-parameters-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B846ef514-0a2b-411c-a6da-cf2ed91234ff%7D?ts=default"
+      }
+    },
+    "name": "omni-monorepo-parameters-service",
+    "uuid": "{846ef514-0a2b-411c-a6da-cf2ed91234ff}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-marketing-campaign-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-marketing-campaign-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-marketing-campaign-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B173e9903-3839-44d7-b212-1fcd75e52840%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~marketing-campaign-service",
+    "uuid": "{173e9903-3839-44d7-b212-1fcd75e52840}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-task-scheduling-engine-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-task-scheduling-engine-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-task-scheduling-engine-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B1115c2ad-8bac-4b40-8c7d-afdf6b14c959%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~task-scheduling-engine-service",
+    "uuid": "{1115c2ad-8bac-4b40-8c7d-afdf6b14c959}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-marketing-campaign-engine-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-marketing-campaign-engine-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-marketing-campaign-engine-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B06d54043-9802-4c0a-abfa-21e4d690d739%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~marketing-campaign-engine-service",
+    "uuid": "{06d54043-9802-4c0a-abfa-21e4d690d739}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-public-api-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-public-api-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-public-api-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B9958eab6-7a96-4932-91f3-9fa9e0c1c216%7D?ts=default"
+      }
+    },
+    "name": "[omni-monorepo]~public-api-service",
+    "uuid": "{9958eab6-7a96-4932-91f3-9fa9e0c1c216}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-telegram-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-telegram-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-telegram-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B1691d970-e957-46ff-82e0-ad99aa2d87c3%7D?ts=default"
+      }
+    },
+    "name": "omni-monorepo-telegram-service",
+    "uuid": "{1691d970-e957-46ff-82e0-ad99aa2d87c3}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-whatsomni-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-whatsomni-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-whatsomni-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B35d7e248-e430-4f38-8928-a8d63f5c1774%7D?ts=default"
+      }
+    },
+    "name": "omni-monorepo-whatsomni-service",
+    "uuid": "{35d7e248-e430-4f38-8928-a8d63f5c1774}",
+    "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
+  },
+  {
+    "type": "repository",
+    "full_name": "twsolutionstelecom/whatsapp-api-nodejs",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/whatsapp-api-nodejs"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/whatsapp-api-nodejs"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7B95dda2c4-4693-4ae0-974a-43cc35601b13%7D?ts=default"
+      }
+    },
     "name": "whatsapp-api-nodejs",
     "uuid": "{95dda2c4-4693-4ae0-974a-43cc35601b13}",
     "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
   },
   {
-    "name": "omnismart-react-widget",
-    "uuid": "{33ff69f0-903b-45fd-99cc-f2b8759901d5}",
+    "type": "repository",
+    "full_name": "twsolutionstelecom/omni-monorepo-marketplace-service",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/twsolutionstelecom/omni-monorepo-marketplace-service"
+      },
+      "html": {
+        "href": "https://bitbucket.org/twsolutionstelecom/omni-monorepo-marketplace-service"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bdfd16d97-92d1-4e6c-9140-27065c91743d%7D?ts=default"
+      }
+    },
+    "name": "omni-monorepo-marketplace-service",
+    "uuid": "{dfd16d97-92d1-4e6c-9140-27065c91743d}",
     "workspace": "{1668c987-ae79-42d8-b6fd-23b03cf14faa}"
   }
 ]

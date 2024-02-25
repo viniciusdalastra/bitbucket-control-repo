@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import * as fs from 'fs';
 import { BitbucketProvider } from 'src/infra/providers/bitbucket.provider';
-import { DefaultPullRequestsDto } from 'src/shared/dtos/defaultPullRequests.dto';
 import { RepositoriePullRequestsDto } from 'src/shared/dtos/repositoriePullRequestsDto.dto';
 
 @Injectable()
@@ -21,18 +19,6 @@ export class CreatePullRequestFromRepositorieUseCase {
     await this.createPullRequest(repositorie, newBranchCreated, body.to);
 
     return this.pullRequestCreated;
-  }
-
-  private loadJson() {
-    try {
-      const conteudoArquivo = fs.readFileSync(
-        'src/shared/files/repo.json',
-        'utf8',
-      );
-      return JSON.parse(conteudoArquivo);
-    } catch (error) {
-      throw new Error(`Error on load JSON: ${error.message}`);
-    }
   }
 
   private async createNewBranch(repositorie, body) {

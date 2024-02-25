@@ -3,7 +3,7 @@ import { RepositorieController } from 'src/presentation/http/repositorie.control
 import { BitbucketProvider } from '../providers/bitbucket.provider';
 import { CreatePullRequestByDefaultJsonUseCase } from 'src/core/use-case/createPullRequestByDefaultJson.use-case';
 import { GetDefaultRepositoriesUseCase } from 'src/core/use-case/getDefaultRepositories.use-case';
-import { CreatePullRequestFromRepositorieUseCase } from 'src/core/use-case/createPullRequestFromRepositorie.use-case copy';
+import { CreatePullRequestFromRepositorieUseCase } from 'src/core/use-case/createPullRequestFromRepositorie.use-case';
 
 @Module({
   imports: [],
