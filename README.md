@@ -1,73 +1,89 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Bitbucket Branch Synchronizer
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Este é um projeto de sincronizador de branches para o Bitbucket, oferecendo diversos endpoints para diferentes funcionalidades, incluindo autenticação e obtenção de informações sobre repositórios.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Endpoints Disponíveis
 
-## Description
+### Auth
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **Descrição:** Autenticação simples.
+- **Método HTTP:** POST
+- **URL:** `/auth`
+- **Corpo da Requisição:**
+  ```json
+  {
+    "login": "seu_login",
+    "password": "sua_senha"
+  }
+  ```
+- **Resposta:**
+  ```json
+  {
+    "token": "seu_token_jwt"
+  }
+  ```
 
-## Installation
+### Repositorie
 
-```bash
-$ yarn install
+- **Descrição:** Informações de workspace, branches e repositórios.
+- **Método HTTP:** GET
+- **URL:** `/repositorie`
+- **Cabeçalho da Requisição:**
+  ```json
+  {
+    "Authorization": "Bearer seu_token_jwt"
+  }
+  ```
+- **Resposta:** JSON composto de informações sobre os repositórios.
+
+## Formato do Arquivo `repo.json`
+
+O arquivo `repo.json` contém informações em formato de array sobre os repositórios. Cada objeto no array possui os seguintes campos:
+
+- `type`: Tipo do repositório.
+- `full_name`: Nome completo do repositório.
+- `links`: Links relacionados ao repositório, incluindo links para si mesmo, HTML e avatar.
+- `name`: Nome do repositório.
+- `uuid`: UUID do repositório.
+- `workspace`: UUID de Espaço de trabalho do repositório.
+
+Exemplo:
+```json
+[
+  {
+    "type": "tipo",
+    "full_name": "nome_completo",
+    "links": {
+      "self": {
+        "href": "url"
+      },
+      "html": {
+        "href": "url"
+      },
+      "avatar": {
+        "href": "url"
+      }
+    },
+    "name": "nome",
+    "uuid": "uuid",
+    "workspace": "workspace"
+  }
+]
 ```
 
-## Running the app
+## Configuração de Ambiente
 
-```bash
-# development
-$ yarn run start
+Certifique-se de configurar as variáveis de ambiente antes de executar o projeto.
 
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+Exemplo de arquivo `.env`:
+```
+PORT=8000
+LOGIN=seu_login
+PASSWORD=sua_senha
+JWT_AUTH_KEY=sua_chave_jwt
+LOGIN_BITBUCKET=seu_login_bitbucket
+PASSWORD_BITBUCKET=sua_senha_bitbucket
 ```
 
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+---
+Este projeto é uma ferramenta útil para interagir com os recursos do Bitbucket de forma programática. Fique à vontade para contribuir ou fazer sugestões de melhorias.
