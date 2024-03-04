@@ -2,6 +2,21 @@
 
 Este é um projeto de sincronizador de branches para o Bitbucket, oferecendo diversos endpoints para diferentes funcionalidades, incluindo autenticação e obtenção de informações sobre repositórios.
 
+## Como Rodar o Serviço
+### Yarn
+- **Instalação**
+```
+yarn
+```
+- **Subir o Serviço Localmente**
+```
+yarn start:dev
+```
+- **Link de Acesso ao Swagger**
+```
+http://localhost:PORT/api
+```
+
 ## Endpoints Disponíveis
 
 ### Auth
