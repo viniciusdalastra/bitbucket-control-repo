@@ -1,6 +1,6 @@
 # Bitbucket Branch Synchronizer
 
-Este é um projeto de sincronizador de branches para o Bitbucket, oferecendo diversos endpoints para diferentes funcionalidades, incluindo autenticação e obtenção de informações sobre repositórios.
+Este é um projeto de sincronizador de branches para o Bitbucket, oferecendo diversos endpoints para diferentes funcionalidades, incluindo autenticação e obtenção de informações sobre repositórios bem como a parte de criação de pull-requests, merge e declines de pull-requests.
 
 ## Como Rodar o Serviço
 ### Yarn
